@@ -1,0 +1,30 @@
+
+> app@0.1.0 build
+> next build
+
+ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\first\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\first\Desktop\I am Stupid\package-lock.json
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 3.4s
+  Running TypeScript ...
+Failed to compile.
+
+./src/app/api/chat/route.ts:8:37
+Type error: Property 'get' does not exist on type 'Promise<ReadonlyRequestCookies>'.
+
+   6 | export async function POST(request: Request) {
+   7 |     const cookieStore = cookies();
+>  8 |     const accessToken = cookieStore.get('access_token')?.value;
+     |                                     ^
+   9 |
+  10 |     if (!accessToken) {
+  11 |         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+Next.js build worker exited with code: 1 and signal: null
