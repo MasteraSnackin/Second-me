@@ -60,7 +60,7 @@ SecondMe Avatar Client is a glassmorphism-styled web application that acts as th
 
 ```mermaid
 flowchart LR
-  User[User Browser] --> UI[SecondMe Avatar Client (Next.js 16)]
+  User[User Browser] --> UI[SecondMe Avatar Client]
   UI --> API[Next.js API Routes]
   API --> SecondMeAPI[SecondMe API Service]
   API --> DB[(Optional App DB)]
